@@ -1,0 +1,14 @@
+# Ignore compilation artifacts to avoid having them accidentally committed
+/bin/
+/db/
+/dbd/
+/lib/
+/target/
+
+envPaths
+html/
+man/
+O.*/
+
+# These files are generated during the compilation process from a template
+**/RELEASE.local

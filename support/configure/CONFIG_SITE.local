@@ -1,0 +1,16 @@
+# Build shared libraries (DLLs on Windows).
+#  Must be either YES or NO.  Definitions in the target-specific
+#  os/CONFIG.Common.<target> and os/CONFIG_SITE.Common.<target> files may
+#  override this setting.  On Windows only these combinations are valid:
+#    SHARED_LIBRARIES = YES and STATIC_BUILD = NO
+#    SHARED_LIBRARIES = NO  and STATIC_BUILD = YES
+SHARED_LIBRARIES=NO
+
+# Build client objects statically.
+#  Must be either YES or NO.
+STATIC_BUILD=YES
+ENABLE_STATIC=YES
+
+# Installation directory, if you want Base to be installed into a
+#  different location then uncomment and set this.
+INSTALL_LOCATION=/home/epicsmgr/epics-7.0/target/base

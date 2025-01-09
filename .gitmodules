@@ -1,0 +1,6 @@
+[submodule "extensions/src/ca-gateway"]
+	path = extensions/src/ca-gateway
+	url = https://github.com/epics-extensions/ca-gateway.git
+[submodule "extensions/src/ca-nameserver"]
+	path = extensions/src/ca-nameserver
+	url = https://github.com/epics-extensions/ca-nameserver.git
