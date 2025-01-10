@@ -4,3 +4,15 @@
 [submodule "extensions/src/ca-nameserver"]
 	path = extensions/src/ca-nameserver
 	url = https://github.com/epics-extensions/ca-nameserver.git
+[submodule "support/pcas"]
+	path = support/pcas
+	url = https://github.com/epics-modules/pcas.git
+[submodule "support/autosave"]
+	path = support/autosave
+	url = https://github.com/epics-modules/autosave.git
+[submodule "support/seq"]
+	path = support/seq
+	url = https://github.com/epics-modules/sequencer.git
+[submodule "support/sscan"]
+	path = support/sscan
+	url = https://github.com/epics-modules/sscan.git
