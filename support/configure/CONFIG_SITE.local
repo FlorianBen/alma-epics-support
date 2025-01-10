@@ -13,4 +13,4 @@ ENABLE_STATIC=YES
 
 # Installation directory, if you want Base to be installed into a
 #  different location then uncomment and set this.
-INSTALL_LOCATION=/home/epicsmgr/epics-7.0/target/base
+INSTALL_LOCATION=/home/epicsmgr/epics-7.0/target/support

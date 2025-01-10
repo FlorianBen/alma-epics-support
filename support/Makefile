@@ -2,11 +2,38 @@
 TOP = .
 include $(TOP)/configure/CONFIG
 
-# Always build ADSupport and ADCore
-DIRS := $(DIRS) $(ADSUPPORT)
+# Always build PCAS
+ifdef PCAS
+DIRS := $(DIRS) $(PCAS)
+endif
 
-DIRS := $(DIRS) $(ADCORE)
-$(ADCORE)_DEPEND_DIRS += $(ADSUPPORT)
+DIRS := $(DIRS) $(AUTOSAVE)
+ifdef AUTOSAVE
+endif
+
+ifdef SEQ
+DIRS := $(DIRS) $(SEQ)
+endif
+
+ifdef SSCAN
+DIRS := $(DIRS) $(SSCAN)
+$(SSCAN)_DEPEND_DIRS += $(SEQ)
+endif
+
+# ifdef AUTOSAVE
+# DIRS := $(DIRS) $(AUTOSAVE)
+# $(FFMPEGSERVER)_DEPEND_DIRS += $(ADCORE)
+# endif
+
+# ifdef AUTOSAVE
+# DIRS := $(DIRS) $(AUTOSAVE)
+# $(FFMPEGSERVER)_DEPEND_DIRS += $(ADCORE)
+# endif
+
+# ifdef AUTOSAVE
+# DIRS := $(DIRS) $(AUTOSAVE)
+# $(FFMPEGSERVER)_DEPEND_DIRS += $(ADCORE)
+# endif
 
 include $(TOP)/configure/RULES_TOP
 

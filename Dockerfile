@@ -9,13 +9,10 @@ FROM alma-epics-base:devel AS support
 
 ADD support ${EPICS_ROOT}/support
 WORKDIR ${EPICS_ROOT}/support
-RUN pwd
-RUN ls -l ..
-RUN make install
+RUN make 
 
 FROM alma-epics-base:latest
-ENV EPICS_EXTENSIONS=${EPICS_ROOT}/target/extensions
+ENV EPICS_SUPPORT=${EPICS_ROOT}/target/support
 ENV PATH="$PATH:${EPICS_BASE}/bin/${EPICS_TARGET_ARCH}"
-
-COPY --from=support ${EPICS_ROOT}/target/extensions ${EPICS_ROOT}/target/
+COPY --from=support ${EPICS_ROOT}/target/support ${EPICS_ROOT}/target/support
 WORKDIR ${EPICS_ROOT}/target/
